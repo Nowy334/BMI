@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
+:root {
+    --color-bd-1: #67b26f;
+    --color-bd-2: #4ca2cd;
+    --color-btn: #67b27f; 
+    --background: white;
+    --color-tekst: #444;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bd-1: #5a679a;
+        --color-bd-2: #282d44;
+        --color-btn: #54608f; 
+        --background: #3b3b3b;
+        --color-tekst:white;
+    }
+  }
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +28,9 @@
 
 html,
 body{
-    color:#444;
+    color:var(--color-tekst);
     font-family: Roboto;
-    background: linear-gradient(to bottom right, #67b26f, #4ca2cd);
+    background: linear-gradient(to bottom right, var(--color-bd-1), var(--color-bd-2));
     height:100vh;
     font-size:20px;
 }
@@ -25,7 +45,7 @@ body{
 
 .bmi{
     display: flex;
-    background-color: white;
+    background-color: var(--background);
     width: 600px;
     height: 350px;
     box-shadow: 0 30px 80px 10px rgba(0,0,0,.2);
@@ -90,7 +110,7 @@ button{
 }
 
 button:hover{
-    background-color:#67b27f;
+    background-color:var(--color-btn);
     color:white;
     border: 0;
 }
@@ -106,7 +126,7 @@ button:focus{
     margin-bottom: -20px;
     text-align: center;
     font-size: 25px;
-    color:#67b27f;
+    color:var(--color-btn);
 }
 
 .info{
